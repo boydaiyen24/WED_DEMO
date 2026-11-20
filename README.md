@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VTC1 - Công ty tuyển dụng</title>
+<title>VTC1 - Tuyển dụng nhân lực</title>
 
 <style>
 * {
@@ -16,147 +16,186 @@
 
 body {
     background: #f4f7fb;
-    color: #333;
+    color: #263445;
 }
 
 header {
-    background: #073b75;
+    background: #102d50;
     color: white;
-    padding: 20px 8%;
+    padding: 20px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
     font-size: 30px;
     font-weight: bold;
-    color: #ffcc00;
+    color: #ff4545;
+}
+
+.logo span {
+    color: white;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
+    margin-left: 22px;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: #ff4545;
 }
 
-.banner {
-    background: linear-gradient(120deg, #07519b, #00a6c7);
+.hero {
+    background: linear-gradient(120deg,#102d50,#2464a0);
     color: white;
+    padding: 75px 20px;
     text-align: center;
-    padding: 90px 20px;
 }
 
-.banner h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
 }
 
-.banner p {
-    font-size: 19px;
-    margin-bottom: 25px;
+.hero p {
+    margin-bottom: 30px;
 }
 
-.btn {
-    display: inline-block;
-    background: #ffcc00;
-    color: #073b75;
-    padding: 13px 28px;
+.search-box {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box input,
+.search-box select {
+    flex: 1;
+    min-width: 180px;
+    padding: 14px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-section {
-    padding: 55px 8%;
+button {
+    background: #ed3939;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c82323;
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 45px auto;
 }
 
 .section-title {
     text-align: center;
-    color: #073b75;
-    font-size: 30px;
     margin-bottom: 30px;
+    color: #102d50;
 }
 
-.about {
-    line-height: 1.8;
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
-}
-
-.cards {
+.stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-bottom: 50px;
 }
 
-.card {
+.stat-card {
     background: white;
     padding: 25px;
-    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 3px 12px #00000012;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000c;
 }
 
-.card h3 {
-    color: #07519b;
-    margin-bottom: 12px;
-}
-
-.card p {
-    line-height: 1.6;
+.stat-card h2 {
+    color: #ed3939;
+    font-size: 30px;
 }
 
 .jobs {
-    background: #eaf2fa;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
 }
 
-.job {
+.job-card {
     background: white;
-    padding: 22px;
-    margin-bottom: 18px;
-    border-radius: 8px;
-    border-left: 5px solid #0786c9;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000c;
+    border-left: 4px solid #ed3939;
 }
 
-.job h3 {
-    color: #07519b;
-    margin-bottom: 10px;
+.job-card h3 {
+    color: #102d50;
+    margin-bottom: 12px;
 }
 
-.contact {
-    background: #073b75;
+.job-card p {
+    margin: 8px 0;
+}
+
+.job-card button {
+    margin-top: 12px;
+}
+
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 650px;
+    margin: 50px auto;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background: #102d50;
     color: white;
+    padding: 35px;
     text-align: center;
     line-height: 2;
 }
 
-.contact h2 {
-    color: #ffcc00;
-    margin-bottom: 20px;
-}
-
-footer {
-    background: #05284f;
-    color: white;
-    text-align: center;
-    padding: 18px;
-}
-
-@media(max-width:600px) {
-    header {
-        justify-content: center;
-        gap: 15px;
+@media(max-width:700px) {
+    .jobs, .stats {
+        grid-template-columns: 1fr;
     }
-    .banner h1 {
-        font-size: 28px;
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    nav a {
+        margin: 5px;
+        display: inline-block;
     }
 }
 </style>
@@ -165,101 +204,192 @@ footer {
 <body>
 
 <header>
-    <div class="logo">VTC1</div>
+    <div class="logo">VTC1 <span>NHÂN LỰC</span></div>
     <nav>
         <a href="#home">Trang chủ</a>
-        <a href="#about">Giới thiệu</a>
-        <a href="#services">Dịch vụ</a>
-        <a href="#jobs">Tuyển dụng</a>
+        <a href="#jobs">Việc làm</a>
+        <a href="#apply">Ứng tuyển</a>
         <a href="#contact">Liên hệ</a>
     </nav>
 </header>
 
-<div class="banner" id="home">
-    <h1>VTC1 - KẾT NỐI VIỆC LÀM</h1>
-    <p>Đồng hành cùng người lao động - Kết nối cơ hội nghề nghiệp</p>
-    <a href="#jobs" class="btn">XEM VIỆC LÀM NGAY</a>
+<section class="hero" id="home">
+    <h1>KẾT NỐI NHÂN TÀI – KIẾN TẠO TƯƠNG LAI</h1>
+    <p>VTC1 - Nền tảng tuyển dụng và phát triển nguồn nhân lực</p>
+
+    <div class="search-box">
+        <input type="text" id="keyword"
+        placeholder="Nhập vị trí công việc...">
+
+        <select id="location">
+            <option value="">Tất cả địa điểm</option>
+            <option>Hà Nội</option>
+            <option>TP. Hồ Chí Minh</option>
+            <option>Quảng Ninh</option>
+            <option>Đà Nẵng</option>
+        </select>
+
+        <button onclick="searchJobs()">Tìm kiếm</button>
+    </div>
+</section>
+
+<div class="container">
+
+    <h2 class="section-title">VTC1 - CƠ HỘI NGHỀ NGHIỆP</h2>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h2>500+</h2>
+            <p>Việc làm</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>200+</h2>
+            <p>Doanh nghiệp</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>1000+</h2>
+            <p>Ứng viên</p>
+        </div>
+    </div>
+
+    <h2 class="section-title" id="jobs">
+        DANH SÁCH VIỆC LÀM
+    </h2>
+
+    <div class="jobs" id="jobList">
+
+        <div class="job-card" data-location="Hà Nội">
+            <h3>Nhân viên kinh doanh</h3>
+            <p>🏢 Công ty VTC1</p>
+            <p>📍 quảng ninh</p>
+            <p>💰 10 - 15 triệu/tháng</p>
+            <button onclick="applyJob('Nhân viên kinh doanh')">
+                Ứng tuyển ngay
+            </button>
+        </div>
+
+        <div class="job-card" data-location="Quảng Ninh">
+            <h3>Nhân viên hành chính</h3>
+            <p>🏢 Công ty VTC1</p>
+            <p>📍 Quảng Ninh</p>
+            <p>💰 8 - 12 triệu/tháng</p>
+            <button onclick="applyJob('Nhân viên hành chính')">
+                Ứng tuyển ngay
+            </button>
+        </div>
+
+        <div class="job-card" data-location="TP. Hồ Chí Minh">
+            <h3>Chuyên viên Marketing</h3>
+            <p>🏢 Công ty VTC1</p>
+            <p>📍 TP. Hồ Chí Minh</p>
+            <p>💰 12 - 18 triệu/tháng</p>
+            <button onclick="applyJob('Chuyên viên Marketing')">
+                Ứng tuyển ngay
+            </button>
+        </div>
+
+        <div class="job-card" data-location="Đà Nẵng">
+            <h3>Nhân viên IT</h3>
+            <p>🏢 Công ty VTC1</p>
+            <p>📍 Đà Nẵng</p>
+            <p>💰 15 - 25 triệu/tháng</p>
+            <button onclick="applyJob('Nhân viên IT')">
+                Ứng tuyển ngay
+            </button>
+        </div>
+
+    </div>
+
+    <section class="form-section" id="apply">
+        <h2 class="section-title">ĐĂNG KÝ ỨNG TUYỂN VTC1</h2>
+
+        <form onsubmit="submitForm(event)">
+            <input type="text" id="name"
+            placeholder="Họ và tên" required>
+
+            <input type="tel" id="phone"
+            placeholder="Số điện thoại" required>
+
+            <input type="email" id="email"
+            placeholder="Email" required>
+
+            <select id="position" required>
+                <option value="">Chọn vị trí ứng tuyển</option>
+                <option>Nhân viên kinh doanh</option>
+                <option>Nhân viên hành chính</option>
+                <option>Chuyên viên Marketing</option>
+                <option>Nhân viên IT</option>
+            </select>
+
+            <textarea id="message"
+            placeholder="Giới thiệu bản thân..."
+            rows="4"></textarea>
+
+            <button type="submit">GỬI HỒ SƠ</button>
+        </form>
+    </section>
+
 </div>
 
-<section id="about">
-    <h2 class="section-title">GIỚI THIỆU VTC1</h2>
-    <div class="about">
-        <p>
-            VTC1 hướng đến việc kết nối người lao động với các doanh nghiệp,
-            nhà máy và khu công nghiệp có nhu cầu tuyển dụng.
-            Chúng tôi mong muốn hỗ trợ ứng viên tìm kiếm công việc phù hợp,
-            cung cấp thông tin tuyển dụng rõ ràng và tạo cầu nối giữa
-            doanh nghiệp với nguồn nhân lực.
-        </p>
-        <p>
-            Với định hướng chuyên nghiệp, tận tâm và nhanh chóng,
-            VTC1 hướng đến việc mang lại những cơ hội việc làm ổn định
-            cho người lao động.
-        </p>
-    </div>
-</section>
-
-<section id="services">
-    <h2 class="section-title">DỊCH VỤ CỦA CHÚNG TÔI</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>👥 Tuyển dụng lao động</h3>
-            <p>Kết nối ứng viên với các doanh nghiệp và nhà máy tại KCN.</p>
-        </div>
-        <div class="card">
-            <h3>📋 Tư vấn việc làm</h3>
-            <p>Hỗ trợ ứng viên tìm hiểu công việc và yêu cầu tuyển dụng.</p>
-        </div>
-        <div class="card">
-            <h3>🏭 Kết nối doanh nghiệp</h3>
-            <p>Hỗ trợ doanh nghiệp tiếp cận nguồn lao động phù hợp.</p>
-        </div>
-        <div class="card">
-            <h3>🤝 Hỗ trợ ứng viên</h3>
-            <p>Hướng dẫn chuẩn bị hồ sơ và quy trình ứng tuyển.</p>
-        </div>
-    </div>
-</section>
-
-<section class="jobs" id="jobs">
-    <h2 class="section-title">THÔNG TIN TUYỂN DỤNG</h2>
-
-    <div class="job">
-        <h3>Nhân viên sản xuất</h3>
-        <p>Địa điểm: Các khu công nghiệp</p>
-        <p>Số lượng: Theo nhu cầu doanh nghiệp</p>
-        <p>Yêu cầu: Có sức khỏe tốt, chăm chỉ, trách nhiệm.</p>
-    </div>
-
-    <div class="job">
-        <h3>Nhân viên kho</h3>
-        <p>Địa điểm: Nhà máy, khu công nghiệp</p>
-        <p>Yêu cầu: Cẩn thận, có tinh thần trách nhiệm.</p>
-    </div>
-
-    <div class="job">
-        <h3>Nhân viên kiểm tra chất lượng (QC)</h3>
-        <p>Địa điểm: Nhà máy sản xuất</p>
-        <p>Yêu cầu: Tỉ mỉ, có khả năng quan sát và kiểm tra sản phẩm.</p>
-    </div>
-
-    <div class="job">
-        <h3>Nhân viên tuyển dụng</h3>
-        <p>Yêu cầu: Giao tiếp tốt, có kỹ năng tư vấn và hỗ trợ ứng viên.</p>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2>LIÊN HỆ VỚI VTC1</h2>
-    <p>Hotline: [Bổ sung số điện thoại]</p>
-    <p>Email: [Bổ sung email công ty]</p>
-    <p>Địa chỉ: [Bổ sung địa chỉ công ty]</p>
-    <p>Facebook/Zalo: [Bổ sung liên kết chính thức]</p>
-</section>
-
-<footer>
-    <p>© 2026 VTC1 - Kết nối việc làm, đồng hành cùng người lao động.</p>
+<footer id="contact">
+    <h2>VTC1 - HỆ THỐNG TUYỂN DỤNG NHÂN LỰC</h2>
+    <p>Kết nối doanh nghiệp - Phát triển nhân tài</p>
+    <p>Email: tuyendung@vtc1.vn</p>
+    <p>Hotline: 0900 000 000</p>
+    <p>© 2026 VTC1. All rights reserved.</p>
 </footer>
+
+<script>
+
+function searchJobs() {
+    let keyword = document.getElementById("keyword")
+        .value.toLowerCase();
+
+    let location = document.getElementById("location")
+        .value;
+
+    let jobs = document.querySelectorAll(".job-card");
+
+    jobs.forEach(job => {
+        let text = job.innerText.toLowerCase();
+        let jobLocation = job.dataset.location;
+
+        let matchKeyword = text.includes(keyword);
+        let matchLocation = !location ||
+            jobLocation === location;
+
+        job.style.display =
+            matchKeyword && matchLocation ? "block" : "none";
+    });
+}
+
+function applyJob(position) {
+    document.getElementById("position").value = position;
+
+    document.getElementById("apply")
+        .scrollIntoView({behavior: "smooth"});
+}
+
+function submitForm(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let position = document.getElementById("position").value;
+
+    alert(
+        "Cảm ơn " + name +
+        "! Bạn đã đăng ký vị trí " + position +
+        ". VTC1 sẽ liên hệ với bạn."
+    );
+
+    event.target.reset();
+}
+
+</script>
 
 </body>
 </html>
